@@ -3,6 +3,9 @@
     "name": "gameplay",
     "slug": "gameplay",
     "version": "1.0.0",
+    "splash":{
+      "background":"#070B24"
+    },
     "assetBundlePatterns": [
       "**/*"
     ]
