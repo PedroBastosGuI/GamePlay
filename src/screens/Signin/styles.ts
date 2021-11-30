@@ -1,12 +1,10 @@
 import {StyleSheet} from 'react-native';
 import { theme } from '../../global/styles/theme';
-import {RFPercentage} from 'react-native-responsive-fontsize'
 
 
 export const styled = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor:theme.colors.background,
         justifyContent:'center',
         alignItems:'center'
 
@@ -31,6 +29,9 @@ export const styled = StyleSheet.create({
         textAlign:"center",
         fontSize: 40,
         marginBottom:16,
+        fontFamily: theme.fonts.title700,
+        lineHeight:40
+
 
     },
     subtitle:{
@@ -38,5 +39,7 @@ export const styled = StyleSheet.create({
         fontSize:15,
         textAlign:"center",
         marginBottom:64,
+        fontFamily: theme.fonts.title500,
+        lineHeight:25
     },
 })

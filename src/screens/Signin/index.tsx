@@ -12,12 +12,7 @@ export function Signin(){
 
     return(
         <View style={styled.container}>
-            <StatusBar
-                style="light"
-                backgroundColor="transparent"
-                translucent
-
-/>
+          
            <Image 
            source={IllustrationImg}
            style={styled.image}
