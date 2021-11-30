@@ -17,8 +17,6 @@ export const styles = StyleSheet.create({
      massage:{
         fontFamily: theme.fonts.text400,
         color: theme.colors.highlight,
-
-
      },
      greeting:{
          fontFamily: theme.fonts.title500,
