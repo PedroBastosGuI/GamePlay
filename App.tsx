@@ -5,7 +5,7 @@ import {Inter_400Regular, Inter_500Medium} from '@expo-google-fonts/inter';
 import {Rajdhani_500Medium, Rajdhani_700Bold} from '@expo-google-fonts/rajdhani';
 import Apploading from 'expo-app-loading'
 
-import { Home } from './src/screens/Home';
+import { Routes } from './src/routes';
 import { StatusBar } from 'react-native';
 import { Background } from './src/Components/Background';
   
@@ -25,7 +25,7 @@ export default function App() {
 
   return(
     <Background>
-      <Home />
+      <Routes />
       <StatusBar
                 barStyle="light-content"
                 backgroundColor="transparent"
