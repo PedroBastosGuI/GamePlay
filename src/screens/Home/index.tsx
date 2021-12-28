@@ -7,6 +7,8 @@ import {
 import { Profile } from '../../Components/Profile';
 import { styles } from './styles';
 
+
+
 export function Home(){
 
     return(

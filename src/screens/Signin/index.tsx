@@ -1,15 +1,23 @@
-import React,{useState} from 'react';
-
+import React from 'react';
+import {Home} from '../Home'
 import { View, Text, Image} from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
 import { styled } from './styles';
 
 import IllustrationImg from '../../assets/ilustration.png'
-import { StatusBar } from 'expo-status-bar';
 import { ButtonIcon } from '../../Components/ButtonIcon';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {TouchableOpacityProps} from 'react-native';
 
-export function Signin(){
 
+interface PropsButtons extends TouchableOpacityProps{}
+   
+export function Signin({
+    ...rest
+} : TouchableOpacityProps){
+// para realizar as navegações 
+   
+const navigation = useNavigation();
     return(
         <View style={styled.container}>
           
@@ -34,14 +42,15 @@ export function Signin(){
             favoritos com seus amigos
             </Text>
 
-            <ButtonIcon 
-                title="Entrar com Discord"
-            />
+                <ButtonIcon 
+                title="Entre com Discord"
+                onPress={ () => navigation.navigate('Home')}
+                />
                </View>
 
            </View>
        
-        
+        // resolver b.o de versão com navegation
         
     )
 

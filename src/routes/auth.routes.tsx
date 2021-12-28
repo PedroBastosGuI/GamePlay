@@ -1,33 +1,34 @@
-// setando as routas de navegação para poder navegar entre as screens
-
 import React from 'react';
 
-import { createStackNavigator} from '@react-navigation/stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { Home } from '../screens/Home';
+import { Signin } from '../screens/Signin';
+import { theme } from '../global/styles/theme';
+
+const Stack = createNativeStackNavigator();
 
 
-
-import {Home} from '../screens/Home';
-import {Signin} from '../screens/Signin';
-
-// desestruturação 
-
-const{Navigator,Screen} = createStackNavigator();
-
-
-export function AuthRoutes() {
+export function AppRoutes() {
     return(
-        <Navigator>
-            <Screen 
-            name="Signin"
-            component={Signin}
+        
+        <Stack.Navigator
+        screenOptions={{
+            headerShown:false,
+            contentStyle:{
+                backgroundColor:theme.colors.secondary100,
+            }
+        }}
+         
+        >
+             <Stack.Screen
+                name="Signin"
+                component={Signin}
             />
-            <Screen 
-            name="Home"
-            component={Home}
+             <Stack.Screen
+                name="Home"
+                component={Home}
             />
-
-            
-        </Navigator>
-    )
+           
+        </Stack.Navigator>
+    );
 }
-
