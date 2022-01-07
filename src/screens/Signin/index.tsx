@@ -19,7 +19,9 @@ export function Signin({
    
 const navigation = useNavigation();
     return(
-        <View style={styled.container}>
+        <View style={styled.container}
+            {...rest}
+        >
           
            <Image 
            source={IllustrationImg}

@@ -24,12 +24,12 @@ export default function App() {
   if(!fontsLoaded){
     return <Apploading />
   }
-
+//resolver a tipagem de react navigation 
   return(
     <Background>
       <NavigationContainer>
       <StatusBar
-                barStyle="light-content"
+                barStyle="light-content" 
                 backgroundColor="transparent"
                 translucent
           />
